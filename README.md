@@ -2,8 +2,11 @@
 
 A full-stack task management application built for the Junior Full-Stack Developer fellowship assignment. Task-Flow allows a single user to create, view, edit, complete, and delete tasks through a clean browser-based interface backed by a REST API and persistent SQLite database.
 
-> **Deployment:** This project is designed for **local setup only**. No cloud deployment is included.
-
+> **🚀 Live Demo:** [https://task-flow-tau-murex.vercel.app](https://task-flow-tau-murex.vercel.app)
+> 
+> *Frontend hosted on Vercel. Backend API hosted on Render.*
+> 
+> ⚠️ **Note for Reviewers:** The backend is hosted on Render's free tier, which goes to sleep after 15 minutes of inactivity. **The first request may take 30-60 seconds to wake up.** Additionally, Render's free tier uses an ephemeral filesystem, meaning the SQLite database will reset to empty when the server sleeps. For a permanent database experience, please run the project locally.
 ---
 
 ##  Features
