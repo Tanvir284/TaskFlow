@@ -1,4 +1,6 @@
-const API_BASE = '/api/tasks';
+const API_BASE = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api/tasks` 
+  : '/api/tasks';
 
 /**
  * Centralized API service for all task-related HTTP calls.

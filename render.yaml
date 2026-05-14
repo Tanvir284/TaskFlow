@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: taskflow-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: '*' # Update this to your Vercel URL once deployed
+      # Uncomment the below if you upgrade to a paid plan and use a persistent disk
+      # - key: DB_PATH
+      #   value: /var/data/taskflow.db
+
+    # Note: Free tier on Render uses an ephemeral filesystem. Your SQLite database 
+    # will reset every time the service spins down (after 15 minutes of inactivity).
+    # To prevent this, upgrade to a Starter plan and uncomment the disk configuration below:
+    # disk:
+    #   name: taskflow-data
+    #   mountPath: /var/data
+    #   sizeGB: 1
